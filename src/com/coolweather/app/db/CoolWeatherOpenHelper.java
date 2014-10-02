@@ -34,7 +34,8 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 		builder.append("create table City(");
 		builder.append("id integer primary key autoincrement,");
 		builder.append("city_name text,");
-		builder.append("city_code text");
+		builder.append("city_code text,");
+		builder.append("province_id integer");
 		builder.append(")");
 		CREATE_CITY = builder.toString();
 		builder.setLength(0);
@@ -42,7 +43,8 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 		builder.append("create table County(");
 		builder.append("id integer primary key autoincrement,");
 		builder.append("county_name text,");
-		builder.append("county_code text");
+		builder.append("county_code text,");
+		builder.append("city_id integer");
 		builder.append(")");
 		CREATE_COUNTY = builder.toString();
 		builder.setLength(0);
@@ -62,7 +64,6 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+		
 	}
-
 }
