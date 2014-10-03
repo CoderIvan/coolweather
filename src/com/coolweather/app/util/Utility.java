@@ -19,6 +19,13 @@ import com.coolweather.app.model.Province;
 
 public class Utility {
 	/**
+	 * 获取本地城市代码
+	 */
+	public synchronized static String getLocalCountyCode() {
+		return "280701";
+	}
+
+	/**
 	 * 解析和处理服务器返回的省级数据
 	 */
 	public synchronized static boolean handleProvincesResponse(final CoolWeatherDB coolWeatherDB, String response) {
